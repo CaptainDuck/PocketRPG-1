@@ -1,1 +1,97 @@
+---
+#Configuration for PocketRPG plugin
 
+#level you want the RPG to work in:
+RPG_LEVEL:
+
+#Everything you can configure per quest:
+Quest_name_1: "quest 1"
+ItemID_for_finish_1: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_1: "1"
+#Capital letters and _ for space item name:
+Reward_quest_1: "GOLD_INGOT"
+Amount_reward_1: "10"
+
+Quest_name_2: "quest 2"
+ItemID_for_finish_2: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_2: "1"
+#Capital letters and _ for space item name:
+Reward_quest_2: "GOLD_INGOT"
+Amount_reward_2: "10"
+
+Quest_name_3: "quest 3"
+ItemID_for_finish_3: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_3: "1"
+#Capital letters and _ for space item name:
+Reward_quest_3: "GOLD_INGOT"
+Amount_reward_3: "10"
+
+Quest_name_4: "quest 4"
+ItemID_for_finish_4: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_4: "1"
+#Capital letters and _ for space item name:
+Reward_quest_4: "GOLD_INGOT"
+Amount_reward_4: "10"
+
+Quest_name_5: "quest 5"
+ItemID_for_finish_5: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_5: "1"
+#Capital letters and _ for space item name:
+Reward_quest_5: "GOLD_INGOT"
+Amount_reward_5: "10"
+
+Quest_name_6: "quest 6"
+ItemID_for_finish_6: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_6: "1"
+#Capital letters and _ for space item name:
+Reward_quest_6: "GOLD_INGOT"
+Amount_reward_6: "10"
+
+Quest_name_7: "quest 7"
+ItemID_for_finish_7: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_7: "1"
+#Capital letters and _ for space item name:
+Reward_quest_7: "GOLD_INGOT"
+Amount_reward_7: "10"
+
+Quest_name_8: "quest 8"
+ItemID_for_finish_8: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_8: "1"
+#Capital letters and _ for space item name:
+Reward_quest_8: "GOLD_INGOT"
+Amount_reward_8: "10"
+
+Quest_name_9: "quest 9"
+ItemID_for_finish_9: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_9: "1"
+#Capital letters and _ for space item name:
+Reward_quest_9: "GOLD_INGOT"
+Amount_reward_9: "10"
+
+Quest_name_10: "quest 10"
+ItemID_for_finish_10: "265"
+#Same item as above but as item name:
+Item_for_finish_1: "Iron ingot"
+Amount_finish_10: "1"
+#Capital letters and _ for space item name:
+Reward_quest_10: "GOLD_INGOT"
+Amount_reward_10: "10"
+...
