@@ -111,5 +111,41 @@ class Listener extends Main implements Listener {
       }
     }
   }
+    public function onCraft(CraftItemEvent $event) {
+    $rpglvl = $this->config->get("RPG_LEVEL")
+    if($event->getPlayer()->getLevelByName() == "$rpglevel") {
+      $event->setCancelled();
+    }
+  }
+  
+  public function onBurn(FurnaceBurnEvent $event2) {
+    $rpglvl = $this->config->get("RPG_LEVEL")
+    if($event2->getPlayer()->getLevelByName() == "$rpglvl") {
+      $event2->setCancelled();
+    }
+  }
+  
+  public function onSmelt(FurnaceSmeltEvent $event3) {
+    $rpglvl = $this->config->get("RPG_LEVEL")
+    if($event3->getPlayer()->getLevelByName() == "$rpglevel") {
+      $event3->setCancelled();
+    }
+  }
+  
+  public function onDrop(PlayerDropEvent $event4) {
+    $rpglvl = $this->config->get("RPG_LEVEL")
+    if($event4->getPlayer()->getLevelByName() == "$rpglevel") {
+      $event4->setCancelled();
+    }
+  }
+  
+  public function onDeath(PlayerDeathEvent $event) {
+    $p = $event->getPlayer();
+    $rpglvl = $this->config->get("RPG_LEVEL");
+    if($p->getLevelByName() == $rpglvl) {
+      $p->setKeepInventory();
+    } else {
+      $p->setKeepInventory(false);
+    }
   }
 }
