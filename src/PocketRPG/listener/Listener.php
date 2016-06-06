@@ -17,7 +17,11 @@ use pocketmine\event\entity\EntityDamageByEntityEvent;
 use pocketmine\event\entity\EntityDamageEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\level\particle\CriticalParticle;
+use pocketmine\level\particle\LavaParticle;
+use pocketmine\level\particle\ExplodeParticle;
 use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\event\BlockBreakEvent;
+use pocketmine\event\BlockPlaceEvent;
 
 class Listener extends Main implements Listener {
   
@@ -63,7 +67,7 @@ class Listener extends Main implements Listener {
                 $y = $hit->y;
                 $z = $hit->z;
                 $hitpos = $hit->getPosition(new Vector3($x, $y, $z));
-                $level->addParticle(new CritialParticle($hitpos));
+                $level->addParticle(new CriticalParticle($hitpos));
                 $this->setKnockBack(2);
                 $this->setDamage(getDamage() + 6);
               }
@@ -80,6 +84,32 @@ class Listener extends Main implements Listener {
         $effect = Effect::getEffect(14)->setDuration(1)->setAmplifier(1)->setVisible(true);
         $p->addEffect($effect);
       }
+    } elseif($p->getItemInHand() == 328) {
+        if($p->hasPermission("class.tanker")) {
+        $effect = Effect::getEffect(11)->setDuration(5)->setAmplifier(2)->setVisible(true);
+        $p->addEffect($effect);
+        }
+      }
     }
+  }
+  public function onBlockPlace(BlockPlaceEvent $event) {
+    $cfglevel = $this->config->get("RPG_LEVEL");
+    $p = $event->getPlayer();
+    if($p instanceof Player) {
+      if($p->getLevelByName() == $cfglevel) {
+        $event->setCancelled();
+        $p->sendMessage(TF:: RED . "You are not allowed to do that here.");
+      }
+    }
+  }
+  public function onBlockBreak(BlockBreakEvent $event) {
+    $p = $event2->getPlayer();
+    if($p instanceof Player) {
+      if($p->getLevelByName() == $cfglevel) {
+        $event2->setCancelled();
+        $p->sendMessage(TF:: RED . "You are not allowed to do that here.")
+      }
+    }
+  }
   }
 }
