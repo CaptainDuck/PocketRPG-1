@@ -1,1 +1,14 @@
+name: PocketRPG
+author: Sandertv
+main: PocketRPG\Main
+version 0.1
+api: [2.0.0]
 
+commands:
+  quest:
+    description: Main quest command
+    usage: /quest start|end|list|see
+    aliases: [q]
+  rpg:
+    description: Main RPG command
+    usage: /rpg start|reset
