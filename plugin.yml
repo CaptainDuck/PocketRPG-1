@@ -7,7 +7,7 @@ api: [2.0.0]
 commands:
   quest:
     description: Main quest command
-    usage: /quest start|end|list|see
+    usage: /quest start|end|list|see <1-10>
     aliases: [q]
   rpg:
     description: Main RPG command
