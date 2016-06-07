@@ -17,13 +17,17 @@ use pocketmine\level\Level;
 use pocketmine\level\Position;
 
 class Main extends PluginBase implements Listener {
-
+  
   public function onEnable() {
+    $configworld = $this->config->get("RPG_WORLD")
     $this->getLogger()->info(TF:: GREEN . "Enabling PocketRPG");
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     @mkdir($this->getDataFolder());
     $this->saveResource("config.yml");
     $this->config = new Config($this->getDataFolder(). "config.yml", Config::YAML);
+    if($this->getServer()->isLeveLoaded($configworld) == false) {
+      $this->getServer()->loadLevel($configworld);
+    }
   }
   
   public function onDisable() {
