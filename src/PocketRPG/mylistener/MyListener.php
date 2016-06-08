@@ -145,8 +145,10 @@ class MyListener extends Main implements Listener {
     $rpglvl = $this->config->get("RPG_LEVEL");
     if($p->getLevel() == $rpglvl) {
       $p->setKeepInventory();
+      $p->setKeepExperience();
     } else {
       $p->setKeepInventory(false);
+      $p->setKeepExperience(false);
     }
   }
 }
