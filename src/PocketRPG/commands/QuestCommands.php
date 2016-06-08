@@ -40,6 +40,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "2":
@@ -58,6 +59,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "3":
@@ -76,6 +78,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "4":
@@ -94,6 +97,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "5":
@@ -112,6 +116,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "6":
@@ -130,6 +135,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "7":
@@ -148,6 +154,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "8":
@@ -166,6 +173,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "9":
@@ -184,6 +192,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
             
           case "10":
@@ -202,6 +211,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You can't finish this quest yet!");
             }
+            return true;
             break;
           }
           break;
@@ -218,6 +228,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "2":
@@ -230,6 +241,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "3":
@@ -242,6 +254,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "4":
@@ -254,6 +267,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
           case "5":
@@ -266,6 +280,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "6":
@@ -278,6 +293,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "7":
@@ -290,6 +306,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "8":
@@ -302,6 +319,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "9":
@@ -314,6 +332,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
           
             case "10":
@@ -326,6 +345,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF::RED . "You are not the right level to start this quest.");
             }
+            return true;
             break;
             }
           break;
@@ -373,6 +393,7 @@ class QuestCommands extends Main {
                     } else {
                       $p->sendMessage(TF:: RED . "" . $this->config->get("Quest_name_5") . " - level 4");
                     }
+                    return true;
                   break;
                                  
                   case "2":
@@ -416,6 +437,7 @@ class QuestCommands extends Main {
                     } else {
                       $p->sendMessage(TF:: RED . "" . $this->config->get("Quest_name_10") . " - level 9");
                     }
+                  return true;
                   break;
             }
         break;
@@ -434,6 +456,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "2":
@@ -448,6 +471,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "3":
@@ -462,6 +486,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
             
           case "4":
@@ -476,6 +501,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
             
           case "5":
@@ -490,6 +516,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "6":
@@ -504,6 +531,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "7":
@@ -518,6 +546,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "8":
@@ -532,6 +561,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "9":
@@ -546,6 +576,7 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           
           case "10":
@@ -560,12 +591,12 @@ class QuestCommands extends Main {
             } else {
               $p->sendMessage(TF:: RED . "You have not started this quest.");
             }
+            return true;
           break;
           }
         break;
         }
       }
     }
-  return true;
   }
 }
