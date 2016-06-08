@@ -3,6 +3,7 @@
 namespace PocketRPG\quests;
 
 use PocketRPG\Main;
+use Pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
