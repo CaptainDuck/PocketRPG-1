@@ -27,7 +27,7 @@ use pocketmine\event\BlockPlaceEvent;
 class Listener extends Main implements Listener {
   
   public function onFight(EntityDamageEvent $event) {
-    if($event instance EntityDamageByEntityEvent && $event->getDamager() instanceof Player) {
+    if($event instanceof EntityDamageByEntityEvent && $event->getDamager() instanceof Player) {
         $hit = $event->getEntity();
         $damager = $event->getDamager();
         $cfglevel = $this->config->get("RPG_LEVEL");
@@ -50,7 +50,7 @@ class Listener extends Main implements Listener {
                 $level->addParticle(new LavaParticle($hitpos));
                 $this->setKnockBack(1);
                 $hit->setOnFire(4);
-                $this->setDamage(getDamage() + 4)
+                $this->setDamage(getDamage() + 4);
               }
             } elseif($p->hasPermission("class.tanker")) {
               if($damager->getItemInHand()->getId() == 328) {
@@ -108,33 +108,33 @@ class Listener extends Main implements Listener {
     if($p instanceof Player) {
       if($p->getLevel() == $cfglevel) {
         $event2->setCancelled();
-        $p->sendMessage(TF:: RED . "You are not allowed to do that here.")
+        $p->sendMessage(TF:: RED . "You are not allowed to do that here.");
       }
     }
   }
     public function onCraft(CraftItemEvent $event) {
-    $rpglvl = $this->config->get("RPG_LEVEL")
+    $rpglvl = $this->config->get("RPG_LEVEL");
     if($event->getPlayer()->getLevel() == "$rpglevel") {
       $event->setCancelled();
     }
   }
   
   public function onBurn(FurnaceBurnEvent $event2) {
-    $rpglvl = $this->config->get("RPG_LEVEL")
+    $rpglvl = $this->config->get("RPG_LEVEL");
     if($event2->getPlayer()->getLevel() == "$rpglvl") {
       $event2->setCancelled();
     }
   }
   
   public function onSmelt(FurnaceSmeltEvent $event3) {
-    $rpglvl = $this->config->get("RPG_LEVEL")
+    $rpglvl = $this->config->get("RPG_LEVEL");
     if($event3->getPlayer()->getLevel() == "$rpglevel") {
       $event3->setCancelled();
     }
   }
   
   public function onDrop(PlayerDropEvent $event4) {
-    $rpglvl = $this->config->get("RPG_LEVEL")
+    $rpglvl = $this->config->get("RPG_LEVEL");
     if($event4->getPlayer()->getLevel() == "$rpglevel") {
       $event4->setCancelled();
     }
