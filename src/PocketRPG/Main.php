@@ -4,7 +4,7 @@ namespace PocketRPG;
 
 use PocketRPG\commands\QuestCommands;
 use PocketRPG\commands\RPGcommands;
-use PocketRPG\listener\listener;
+use PocketRPG\mylistener\MyListener;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
