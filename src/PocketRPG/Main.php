@@ -25,9 +25,14 @@ class Main extends PluginBase implements Listener {
     $configworld = $this->config->get("RPG_LEVEL");
     $this->getLogger()->info(TF:: GREEN . "Enabling PocketRPG");
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
+    
     @mkdir($this->getDataFolder());
     $this->saveResource("config.yml");
     $this->config = new Config($this->getDataFolder(). "config.yml", Config::YAML);
+    @mkdir($this->getDataFolder());
+    $this->saveResource("party.yml");
+    $this->party = new Config($this->getDataFolder(). "party.yml", Config::YAML);
+    
     if($this->getServer()->isLevelLoaded($configworld) == false) {
       $this->getServer()->loadLevel($configworld);
     }
