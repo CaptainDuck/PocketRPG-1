@@ -22,7 +22,7 @@ use pocketmine\level\Position;
 class Main extends PluginBase implements Listener {
   
   public function onEnable() {
-    $configworld = $this->config->get("RPG_WORLD");
+    $configworld = $this->config->get("RPG_LEVEL");
     $this->getLogger()->info(TF:: GREEN . "Enabling PocketRPG");
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     @mkdir($this->getDataFolder());
