@@ -11,4 +11,4 @@ commands:
     aliases: [q]
   rpg:
     description: Main RPG command
-    usage: /rpg start|reset
+    usage: /rpg start|reset mage|warrior|assassin|tanker
