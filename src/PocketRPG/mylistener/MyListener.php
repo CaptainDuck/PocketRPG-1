@@ -1,6 +1,6 @@
 <?php
 
-namespace PocketRPG\listener;
+namespace PocketRPG\mylistener;
 
 use PocketRPG\Main;
 use pocketmine\living\Living;
@@ -24,7 +24,7 @@ use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\event\BlockBreakEvent;
 use pocketmine\event\BlockPlaceEvent;
 
-class listener extends Main implements Listener {
+class MyListener extends Main implements Listener {
   
   public function onFight(EntityDamageEvent $event) {
     if($event instanceof EntityDamageByEntityEvent && $event->getDamager() instanceof Player) {
