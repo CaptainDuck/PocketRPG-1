@@ -3,6 +3,7 @@
 namespace PocketRPG\commands;
 
 use PocketRPG\Main;
+use Pocketmine\item\Item;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\utils\TextFormat as TF;
