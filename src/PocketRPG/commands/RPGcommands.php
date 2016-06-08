@@ -28,6 +28,7 @@ class RPGcommands extends Main {
               $p->setPermission("class.mage");
               $p->switchLevel($cfglevel);
             }
+            return true;
             break;
             
           case "warrior":
@@ -41,6 +42,7 @@ class RPGcommands extends Main {
               $p->setPermission("class.warrior");
               $p->switchLevel($cfglevel);
             }
+            return true;
             break;
             
           case "tanker":
@@ -54,6 +56,7 @@ class RPGcommands extends Main {
               $p->setPermission("class.tanker");
               $p->switchLevel($cfglevel);
             }
+            return true;
             break;
    
           case "archer":
@@ -69,6 +72,7 @@ class RPGcommands extends Main {
               $p->setPermission("class.archer");
               $p->switchLevel($cfglevel);
             }
+            return true;
             break;
   
           case "assassin":
@@ -84,6 +88,7 @@ class RPGcommands extends Main {
               $p->setPermission("class.assassin");
               $p->switchLevel($cfglevel);
             }
+            return true;
             break;
           }
           break;
@@ -108,10 +113,10 @@ class RPGcommands extends Main {
             $p->sendMessage(TF:: RED . "Are you sure you want to end your adventure? This will reset ALL your quest data. (All items too!)");
             $p->setPermission("rpg.reset");
            }
+           return true;
           break;
         }
       break;
     }
-  return true;
   }
 }
