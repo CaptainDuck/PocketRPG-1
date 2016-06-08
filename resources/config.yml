@@ -2,7 +2,7 @@
 #Configuration for PocketRPG plugin
 
 #level you want the RPG to work in:
-RPG_LEVEL:
+RPG_WORLD:
 
 #Everything you can configure per quest:
 Quest_name_1: "quest 1"
