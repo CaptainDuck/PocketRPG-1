@@ -1,7 +1,5 @@
 <?php
-
 namespace PocketRPG\commands;
-
 use PocketRPG\Main;
 use Pocketmine\item\Item;
 use pocketmine\command\Command;
@@ -11,7 +9,6 @@ use pocketmine\utils\Config;
 use pocketmine\permission\Permission;
 use pocketmine\plugin\PluginBase;
 use pocketmine\level\Level;
-
 class RPGcommands extends Main {
   
   public function onCommand(CommandSender $p, Command $cmd, $label, array $args) {
@@ -29,7 +26,7 @@ class RPGcommands extends Main {
               $p->getInventory->addItem($wand);
               $p->setPermission("class.chosen");
               $p->setPermission("class.mage");
-              $p->switchLevel($level $cfglevel);
+              $p->switchLevel($cfglevel);
             }
             break;
             
@@ -42,7 +39,7 @@ class RPGcommands extends Main {
               $p->getInventory->addItem($sword);
               $p->setPermission("class.chosen");
               $p->setPermission("class.warrior");
-              $p->switchLevel($level $cfglevel);
+              $p->switchLevel($cfglevel);
             }
             break;
             
@@ -55,7 +52,7 @@ class RPGcommands extends Main {
               $p->getInventory->addItem($shield);
               $p->setPermission("class.chosen");
               $p->setPermission("class.tanker");
-              $p->switchLevel($level $cfglevel);
+              $p->switchLevel($cfglevel);
             }
             break;
    
@@ -67,10 +64,10 @@ class RPGcommands extends Main {
               $bow = Item::get(Item::BOW, 0, 1);
               $arrows = Item::get(Item::ARROW, 0, 128);
               $p->getInventory->addItem($bow);
-              $p->getInventory->addItem($arrows)
+              $p->getInventory->addItem($arrows);
               $p->setPermission("class.chosen");
               $p->setPermission("class.archer");
-              $p->switchLevel($level $cfglevel);
+              $p->switchLevel($cfglevel);
             }
             break;
   
@@ -85,7 +82,7 @@ class RPGcommands extends Main {
               $p->getInventory->addItem($cloak);
               $p->setPermission("class.chosen");
               $p->setPermission("class.assassin");
-              $p->switchLevel($level $cfglevel);
+              $p->switchLevel($cfglevel);
             }
             break;
           }
