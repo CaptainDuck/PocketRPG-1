@@ -3,6 +3,7 @@
 namespace PocketRPG\Listener;
 
 use PocketRPG\Main;
+use pocketmine\living\Living;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\utils\Config;
 use pocketmine\event\Listener;
