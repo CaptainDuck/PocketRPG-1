@@ -33,10 +33,6 @@ class Main extends PluginBase implements Listener {
     @mkdir($this->getDataFolder());
     $this->saveResource("party.yml");
     $this->party = new Config($this->getDataFolder(). "party.yml", Config::YAML);
-    
-    $configworld = $this->config->get("RPG_LEVEL");
-    if($this->getServer()->isLevelLoaded($configworld) == false) {
-      $this->getServer()->loadLevel($configworld);
     }
   }
   
