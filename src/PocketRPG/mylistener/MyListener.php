@@ -31,7 +31,9 @@ class MyListener extends Main implements Listener {
         $hit = $event->getEntity();
         $damager = $event->getDamager();
         $cfglevel = $this->config->get("RPG_LEVEL");
-        if($damager->getLevel() == $cfglevel) {
+        if($this->party->get($hit) == $this->party->get($damager)) {
+          $event->setCancelled();
+        } elseif($damager->getLevel() == $cfglevel) {
             if($p->hasPermission("class.assassin")) {
               if($damager->getItemInHand()->getId() == 388) {
                 $x = $hit->x;
