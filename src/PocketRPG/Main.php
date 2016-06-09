@@ -2,9 +2,11 @@
 
 namespace PocketRPG;
 
+use PocketRPG\commands\PartyCommands;
 use PocketRPG\commands\QuestCommands;
 use PocketRPG\commands\RPGcommands;
 use PocketRPG\mylistener\MyListener;
+
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
