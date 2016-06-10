@@ -33,7 +33,7 @@ class MyListener extends Main implements Listener {
         $cfglevel = $this->config->get("RPG_LEVEL");
         if($this->party->get($hit) == $this->party->get($damager)) {
           $event->setCancelled();
-        } elseif($damager->getLevel() == $cfglevel) {
+        } elseif($damager->getLevel() == $this->getServer()->getLevelByName($cfglevel)) {
             if($p->hasPermission("class.assassin")) {
               if($damager->getItemInHand()->getId() == 388) {
                 $x = $hit->x;
@@ -81,7 +81,7 @@ class MyListener extends Main implements Listener {
   public function onItemHeld(PlayerItemHeldEvent $event) {
     $p = $event->getPlayer();
     $cfglevel = $this->config->get("RPG_LEVEL");
-    if($p->getLevel() == $cfglevel) {
+    if($p->getLevel() == $this->getServer()->getLevelByName() == $cfglevel) {
       if($p->getItemInHand() == 347) {
         if($p->hasPermission("class.assassin")) {
         $effect = Effect::getEffect(14)->setDuration(1)->setAmplifier(1)->setVisible(true);
@@ -99,7 +99,7 @@ class MyListener extends Main implements Listener {
     $cfglevel = $this->config->get("RPG_LEVEL");
     $p = $event->getPlayer();
     if($p instanceof Player) {
-      if($p->getLevel() == $cfglevel) {
+      if($p->getLevel() == $this->getServer()->getLevelByName($cfglevel)) {
         $event->setCancelled();
         $p->sendMessage(TF:: RED . "You are not allowed to do that here.");
       }
@@ -107,8 +107,9 @@ class MyListener extends Main implements Listener {
   }
   public function onBlockBreak(BlockBreakEvent $event) {
     $p = $event2->getPlayer();
+    $cfglevel = $this->config->get("RPG_LEVEL")
     if($p instanceof Player) {
-      if($p->getLevel() == $cfglevel) {
+      if($p->getLevel() == $this->getServer()->getLevelByName($cfglevel)) {
         $event2->setCancelled();
         $p->sendMessage(TF:: RED . "You are not allowed to do that here.");
       }
@@ -116,28 +117,28 @@ class MyListener extends Main implements Listener {
   }
     public function onCraft(CraftItemEvent $event) {
     $rpglvl = $this->config->get("RPG_LEVEL");
-    if($event->getPlayer()->getLevel() == "$rpglevel") {
+    if($event->getPlayer()->getLevel() == $this->getServer()->getLevelByName($rpglvl)) {
       $event->setCancelled();
     }
   }
   
   public function onBurn(FurnaceBurnEvent $event2) {
     $rpglvl = $this->config->get("RPG_LEVEL");
-    if($event2->getPlayer()->getLevel() == "$rpglvl") {
+    if($event2->getPlayer()->getLevel() == $this->getServer()->getLevelByName($rpglvl)) {
       $event2->setCancelled();
     }
   }
   
   public function onSmelt(FurnaceSmeltEvent $event3) {
     $rpglvl = $this->config->get("RPG_LEVEL");
-    if($event3->getPlayer()->getLevel() == "$rpglevel") {
+    if($event3->getPlayer()->getLevel() == $this->getServer()->getLevelByName($rpglvl)) {
       $event3->setCancelled();
     }
   }
   
   public function onDrop(PlayerDropEvent $event4) {
     $rpglvl = $this->config->get("RPG_LEVEL");
-    if($event4->getPlayer()->getLevel() == "$rpglevel") {
+    if($event4->getPlayer()->getLevel() == $this->getServer()->getLevelByName($rpglvl)) {
       $event4->setCancelled();
     }
   }
@@ -145,7 +146,7 @@ class MyListener extends Main implements Listener {
   public function onDeath(PlayerDeathEvent $event) {
     $p = $event->getPlayer();
     $rpglvl = $this->config->get("RPG_LEVEL");
-    if($p->getLevel() == $rpglvl) {
+    if($p->getLevel() == $this->getServer->getLevelByName($rpglvl)) {
       $p->setKeepInventory();
       $p->setKeepExperience();
     } else {
