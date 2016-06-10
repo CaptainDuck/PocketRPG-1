@@ -1,15 +1,18 @@
 <?php
 namespace PocketRPG\commands;
+
 use PocketRPG\Main;
 use Pocketmine\item\Item;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\CommandExecutor;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\utils\Config;
 use pocketmine\permission\Permission;
 use pocketmine\plugin\PluginBase;
 use pocketmine\level\Level;
-class RPGcommands extends Main {
+
+class RPGcommands extends PluginBase implements CommandExecutor{
   
   public function onCommand(CommandSender $p, Command $cmd, $label, array $args) {
     switch(strtolower($cmd->getName())) {
