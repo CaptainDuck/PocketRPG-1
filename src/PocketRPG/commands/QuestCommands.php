@@ -7,6 +7,7 @@ use Pocketmine\item\Item;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\CommandExecutor;
 use pocketmine\utils\TextFormat as TF;
 use pocketmine\utils\Config;
 use pocketmine\permission\Permission;
@@ -14,7 +15,7 @@ use pocketmine\Server;
 use pocketmine\Player;
 use pocketmine\level\Level;
 
-class QuestCommands extends Main {
+class QuestCommands extends PluginBase implements CommandExecutor{
 
   public function onCommand(CommandSender $p, Command $cmd, $label, array $args) {
     if(strtolower($cmd->getName() == "quest")) {
