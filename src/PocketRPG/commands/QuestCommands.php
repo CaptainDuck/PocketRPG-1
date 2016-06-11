@@ -1,6 +1,6 @@
 <?php
 
-namespace PocketRPG\quests;
+namespace PocketRPG\commands;
 
 use PocketRPG\Main;
 use Pocketmine\item\Item;
